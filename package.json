@@ -1,0 +1,44 @@
+{
+  "name": "@otp-forge/redis-store",
+  "version": "0.0.1",
+  "description": "Officially supported Redis store for https://www.npmjs.com/package/@otp-forge/otp-forge.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tsc",
+    "build": "tsup index.ts --format cjs,esm",
+    "release": "pnpm run build && changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otp-forge/redis-store.git"
+  },
+  "keywords": [
+    "redis",
+    "store",
+    "otp",
+    "password"
+  ],
+  "author": "Rushabh Javeri <rushabhworks247@gmail.com>",
+  "contributors": [
+    "Manan Gandhi <ardumanan@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otp-forge/redis-store/issues"
+  },
+  "homepage": "https://github.com/otp-forge/redis-store#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@otp-forge/otp-forge": "^1.0.2",
+    "@redis/client": "^1.5.17",
+    "@types/node": "^20.14.12",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "@otp-forge/otp-forge": ">=1",
+    "@redis/client": ">=1"
+  }
+}
